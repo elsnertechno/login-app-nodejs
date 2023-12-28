@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "62c93f0f-9a51-4538-8c7b-3735bfc2ebdc",
+		"name": "BASIC USER COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19400088"
+	},
+	"item": [
+		{
+			"name": "ADD USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhOTA3YmQ3MzI3OTBkNDQyYTFjMzYiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3MDM1ODA3MDYsImV4cCI6MTczNTEzODMwNn0.GXF6K_WYoCshJcd-6a5wyJdLWLy7QxvJ0Uzrv0e3cVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user12@gmail.com\",\n    \"name\":\"user1\",\n    \"phone\":\"11111 11111\",\n    \"address\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4848/v1/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4848",
+					"path": [
+						"v1",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhOTA3YmQ3MzI3OTBkNDQyYTFjMzYiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3MDM1ODA3MDYsImV4cCI6MTczNTEzODMwNn0.GXF6K_WYoCshJcd-6a5wyJdLWLy7QxvJ0Uzrv0e3cVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userID\":\"658a907bd732790d442a1c36\",\n    \"email\":\"admin@gmail.com\",\n    \"name\":\"Admin\",\n    \"phone\":\"99999 99999\",\n    \"address\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4848/v1/user/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4848",
+					"path": [
+						"v1",
+						"user",
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhOTA3YmQ3MzI3OTBkNDQyYTFjMzYiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3MDM1ODA3MDYsImV4cCI6MTczNTEzODMwNn0.GXF6K_WYoCshJcd-6a5wyJdLWLy7QxvJ0Uzrv0e3cVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"limit\":5,\n    \"pageNo\":1,\n    \"search\":\"\",\n    \"sort\":\"_id\",\n    \"sortBy\":\"desc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4848/v1/user/getUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4848",
+					"path": [
+						"v1",
+						"user",
+						"getUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhOTA3YmQ3MzI3OTBkNDQyYTFjMzYiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3MDM1ODA3MDYsImV4cCI6MTczNTEzODMwNn0.GXF6K_WYoCshJcd-6a5wyJdLWLy7QxvJ0Uzrv0e3cVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userID\":\"658a8487a1a55e521e31c694\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4848/v1/user/deleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4848",
+					"path": [
+						"v1",
+						"user",
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
